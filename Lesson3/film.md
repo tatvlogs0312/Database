@@ -4,11 +4,11 @@
 SELECT title,description,length,special_features,rating
 FROM `film`
 WHERE rating = 'PG' AND
-special_features = 'Deleted Scenes' AND
+special_features LIKE '%Deleted Scenes%' AND
 rental_rate < 2.99
 ```
 
-![film](1.png)
+![film](5.png)
 
 ## _2, Lấy ra thông tin các bộ phim gồm: Tiêu đề, mô tả, thời lượng, special feature, rating._
 
