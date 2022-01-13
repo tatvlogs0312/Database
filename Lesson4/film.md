@@ -10,7 +10,7 @@ WHERE film_actor.film_id = (SELECT film_id FROM film WHERE title = 'ACADEMY DINO
 ## _2 Lấy ra title, description, release_year, length, rating của các bộ phim có rating là G, đếm xem mỗi phim có bao nhiêu diễn viên tham gia_
 
 ```sql
-SELECT title, description, length , rating, COUNT(actor.actor_id) AS 'Tổng số diễn viên'
+SELECT title, description, release_year , length , rating, COUNT(actor.actor_id) AS 'Tổng số diễn viên'
 FROM film
 LEFT JOIN film_actor ON film.film_id = film_actor.film_id
 LEFT JOIN actor ON film_actor.actor_id = actor.actor_id
