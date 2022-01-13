@@ -27,10 +27,11 @@ _Lấy ra các bộ phim có rental rate > trung bính cộng vừa tính_
 ```sql
 SELECT title,description,length,special_features,rating
 FROM `film`
-WHERE rental_rate > (SELECT AVG(rental_rate) FROM film)
+WHERE rating = 'G' AND  
+rental_rate > (SELECT AVG(rental_rate) FROM film)
 ```
 
-![film có rental_rate lớn hơn trung bình vừa tính](3.png)
+![film có rental_rate lớn hơn trung bình vừa tính](7.png)
 
 ## _3, Lấy ra các phim có special feature khác Deleted Scenes_
 
