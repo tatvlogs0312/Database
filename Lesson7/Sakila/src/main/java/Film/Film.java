@@ -8,9 +8,9 @@ public class Film {
     private int release_year;
     private int length;
     private String rating;
-    private String[] category;
+    private String category;
 
-    public Film(String tittle, String description, int release_year, int length, String rating, String[] category) {
+    public Film(String tittle, String description, int release_year, int length, String rating, String category) {
         this.tittle = tittle;
         this.description = description;
         this.release_year = release_year;
@@ -59,11 +59,11 @@ public class Film {
         this.rating = rating;
     }
 
-    public String[] getCategory() {
+    public String getCategory() {
         return category;
     }
 
-    public void setCategory(String[] category) {
+    public void setCategory(String category) {
         this.category = category;
     }
 
@@ -75,7 +75,7 @@ public class Film {
                 ", release_year=" + release_year +
                 ", length=" + length +
                 ", rating='" + rating + '\'' +
-                ", category=" + Arrays.toString(category) +
+                ", category='" + category + '\'' +
                 '}';
     }
 }
