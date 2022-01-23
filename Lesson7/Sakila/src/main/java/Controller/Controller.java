@@ -5,6 +5,7 @@ import Film.Film;
 import Service.Service;
 
 import java.sql.Connection;
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Controller {
@@ -20,8 +21,20 @@ public class Controller {
         sc = new Scanner(System.in);
     }
 
-    public void show(){
-        Film film = service.getFilm(conn);
-        System.out.println(film);
+    public void getFilm(){
+        ArrayList<Film> list = service.getFilm(conn);
+        for(Film film : list){
+            System.out.println(film);
+        }
+    }
+
+    public void getFilmActor(){
+        service.filmActor(conn);
+    }
+
+    public void getFilmTitle(){
+        System.out.print("Nhập tên phim muốn tìm : ");
+        String title = sc.nextLine();
+        service.searchByTitle(conn,title);
     }
 }
